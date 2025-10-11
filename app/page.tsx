@@ -63,8 +63,8 @@ export default function HomePage() {
         {/* About Section */}
         <section className="border-t border-border/40 bg-muted/30 py-12 md:py-24">
           <div className="container">
-            <div className="mx-auto max-w-3xl space-y-8">
-              <div className="space-y-4 animate-fade-in-up text-center" style={{ animationDelay: "0.1s" }}>
+            <div className="mx-auto max-w-3xl space-y-8 text-center">
+              <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About Me</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
@@ -87,7 +87,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="space-y-4 animate-fade-in-up text-center" style={{ animationDelay: "0.3s" }}>
+              <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <h3 className="text-xl font-semibold">Certifications</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Badge variant="secondary" className="px-3 py-1">
@@ -105,15 +105,15 @@ export default function HomePage() {
         {/* Skills Section */}
         <section className="py-12 md:py-24">
           <div className="container">
-            <div className="mx-auto max-w-4xl space-y-8">
-              <div className="space-y-4 text-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="mx-auto max-w-4xl space-y-8 text-center">
+              <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Skills & Technologies</h2>
                 <p className="text-muted-foreground">A comprehensive toolkit for building modern web applications</p>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
-                <Card className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                  <CardContent className="pt-6">
+              <div className="grid gap-6 md:grid-cols-2 justify-items-center">
+                <Card className="animate-fade-in-up w-full" style={{ animationDelay: "0.3s" }}>
+                  <CardContent className="pt-6 text-center">
                     <h3 className="mb-4 text-lg font-semibold">Languages</h3>
                     <div className="flex flex-wrap gap-2">
                       {skills.languages.map((skill) => (
@@ -125,8 +125,8 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                  <CardContent className="pt-6">
+                <Card className="animate-fade-in-up w-full" style={{ animationDelay: "0.4s" }}>
+                  <CardContent className="pt-6 text-center">
                     <h3 className="mb-4 text-lg font-semibold">Frameworks & Libraries</h3>
                     <div className="flex flex-wrap gap-2">
                       {skills.frameworks.map((skill) => (
@@ -138,8 +138,8 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                  <CardContent className="pt-6">
+                <Card className="animate-fade-in-up w-full" style={{ animationDelay: "0.5s" }}>
+                  <CardContent className="pt-6 text-center">
                     <h3 className="mb-4 text-lg font-semibold">Tools & Platforms</h3>
                     <div className="flex flex-wrap gap-2">
                       {skills.tools.map((skill) => (
@@ -151,8 +151,8 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-                  <CardContent className="pt-6">
+                <Card className="animate-fade-in-up w-full" style={{ animationDelay: "0.6s" }}>
+                  <CardContent className="pt-6 text-center">
                     <h3 className="mb-4 text-lg font-semibold">Methodologies & Practices</h3>
                     <div className="flex flex-wrap gap-2">
                       {skills.methodologies.map((skill) => (
