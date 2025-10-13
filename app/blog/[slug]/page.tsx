@@ -17,6 +17,7 @@ const blogPosts: Record<
     content: string
   }
 > = {
+  
   "clean-architecture-dotnet": {
     title: "Implementing Clean Architecture in .NET Core",
     date: "2024-01-15",
@@ -69,6 +70,8 @@ Solution/
 This structure ensures that your business logic remains independent of external concerns, making your application more maintainable and testable.
     `,
   },
+
+
   "angular-performance-optimization": {
     title: "Angular Performance Optimization Techniques",
     date: "2024-01-08",
@@ -137,6 +140,8 @@ ngOnDestroy() {
 These techniques will significantly improve your Angular application's performance and user experience.
     `,
   },
+
+
   "microservices-communication-patterns": {
     title: "Microservices Communication Patterns",
     date: "2023-12-20",
@@ -190,6 +195,8 @@ Using platforms like Apache Kafka:
 Choose the right pattern based on your specific requirements for consistency, performance, and complexity.
     `,
   },
+
+  
   "sql-query-optimization": {
     title: "SQL Query Optimization Best Practices",
     date: "2023-12-10",

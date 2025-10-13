@@ -17,8 +17,7 @@ export const metadata: Metadata = {
     title: "Christos Mappouras | Full Stack Software Engineer",
     description: "Full Stack Software Engineer specializing in C#/.NET, Angular, and modern web technologies.",
     type: "website",
-  },
-    generator: 'v0.app'
+  }
 }
 
 export default function RootLayout({
