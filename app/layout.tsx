@@ -13,10 +13,16 @@ export const metadata: Metadata = {
     "Full Stack Software Engineer specializing in C#/.NET, Angular, and modern web technologies. Building professional web applications and RESTful APIs.",
   keywords: ["Full Stack Developer", "Software Engineer", "C#", ".NET", "Angular", "TypeScript", "SQL", "Azure"],
   authors: [{ name: "Christos Mappouras" }],
+  icons: {
+    icon: '/chris03.png',
+    shortcut: '/chris03.png',
+    apple: '/chris03.png',
+  },
   openGraph: {
     title: "Christos Mappouras | Full Stack Software Engineer",
     description: "Full Stack Software Engineer specializing in C#/.NET, Angular, and modern web technologies.",
     type: "website",
+    images: ['/chris03.png'],
   }
 }
 
