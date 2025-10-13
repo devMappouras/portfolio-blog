@@ -144,7 +144,7 @@
   background: oklch(0.35 0.05 250);
 }
 
-/* Animated background */
+/* Animated background - Slow moving fog effect */
 .animated-bg {
   position: fixed;
   top: 0;
@@ -152,15 +152,76 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("/background.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.15;
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.03) 0%, 
+    rgba(139, 92, 246, 0.03) 50%, 
+    rgba(236, 72, 153, 0.03) 100%);
+}
+
+.animated-bg::before,
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(139, 92, 246, 0.08) 25%, 
+    transparent 50%);
+  animation: fogMove 30s ease-in-out infinite;
+}
+
+.animated-bg::before {
+  top: -50%;
+  left: -50%;
+  animation-delay: 0s;
+}
+
+.animated-bg::after {
+  bottom: -50%;
+  right: -50%;
+  animation-delay: -15s;
+  background: radial-gradient(circle at center, 
+    rgba(236, 72, 153, 0.08) 0%, 
+    rgba(139, 92, 246, 0.06) 25%, 
+    transparent 50%);
+}
+
+@keyframes fogMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(10%, 10%) scale(1.1);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-10%, 5%) scale(0.9);
+    opacity: 0.4;
+  }
 }
 
 .dark .animated-bg {
-  opacity: 0.08;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.02) 0%, 
+    rgba(139, 92, 246, 0.02) 50%, 
+    rgba(236, 72, 153, 0.02) 100%);
+}
+
+.dark .animated-bg::before {
+  background: radial-gradient(circle at center, 
+    rgba(59, 130, 246, 0.06) 0%, 
+    rgba(139, 92, 246, 0.04) 25%, 
+    transparent 50%);
+}
+
+.dark .animated-bg::after {
+  background: radial-gradient(circle at center, 
+    rgba(236, 72, 153, 0.05) 0%, 
+    rgba(139, 92, 246, 0.03) 25%, 
+    transparent 50%);
 }
 
 /* Fade-in animations for sections */

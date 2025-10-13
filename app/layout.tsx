@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://vercel.com/devmappouras-projects/v0-portfolio-and-blog'),
   title: "Christos Mappouras | Full Stack Software Engineer",
   description:
     "Full Stack Software Engineer specializing in C#/.NET, Angular, and modern web technologies. Building professional web applications and RESTful APIs.",
